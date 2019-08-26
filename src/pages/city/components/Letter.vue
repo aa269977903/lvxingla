@@ -8,7 +8,7 @@
 export default {
   name: 'CityLetter',
   props: {
-    cities: Array
+    cities: Object
   },
   computed: {
     letters () {

@@ -24,7 +24,7 @@ export default {
   },
   data: function () {
     return {
-      cities: [],
+      cities: {},
       hotCities: []
     }
   },

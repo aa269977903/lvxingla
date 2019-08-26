@@ -32,7 +32,7 @@ import Bscroll from 'better-scroll'
 export default {
   name: 'CityList',
   props: {
-    cities: Array,
+    cities: Object,
     hotCities: Array
   },
   mounted () {
