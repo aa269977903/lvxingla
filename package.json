@@ -15,6 +15,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "fastclick": "^1.0.6",
+    "better-scroll": "^1.8.1",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
     "vue": "^2.5.2",

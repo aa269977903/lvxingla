@@ -52,7 +52,6 @@
           <div class="item border-bottom">asusi</div>
           <div class="item border-bottom">asusi</div>
           <div class="item border-bottom">asusi</div>
-          <div class="item border-bottom">asusi</div>
         </div>
       </div>
     </div>
@@ -60,8 +59,12 @@
 </template>
 
 <script>
+import Bscroll from 'better-scroll'
 export default {
-  name: 'CityList'
+  name: 'CityList',
+  mounted () {
+    this.scroll = new Bscroll(this.$refs.wrapper)
+  }
 }
 </script>
 
