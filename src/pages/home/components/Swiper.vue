@@ -3,7 +3,7 @@
     <swiper :options="swiperOption">
       <!-- slides -->
       <swiper-slide v-for="item of swiperList" :key="item.id">
-        <img class="swiper-img" :src="item.url" :alt="item.msg">
+        <img class="swiper-img" :src="item.imgUrl" :alt="item.msg">
       </swiper-slide>
       <!-- Optional controls -->
       <div class="swiper-pagination"  slot="pagination"></div>
@@ -14,6 +14,9 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    swiperList: Array
+  },
   data () {
     return {
       swiperOption: {
@@ -21,7 +24,7 @@ export default {
         loop: true,
         speed: 500
       },
-      swiperList: [
+      swiperList1: [
         {
           id: '001',
           url: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193' +
@@ -47,7 +50,7 @@ export default {
     overflow: hidden
     width: 100%
     height: 0
-    padding-bottom: 31.25%
+    padding-bottom: 26.66%
     background: #eee
     .swiper-img
       width: 100%
