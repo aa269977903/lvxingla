@@ -1,32 +1,24 @@
 <template>
   <ul class="list">
-    <li class="item">a</li>
-    <li class="item">a</li>
-    <li class="item">a</li>
-    <li class="item">a</li>
-    <li class="item">a</li>
-    <li class="item">a</li>
-    <li class="item">a</li>
-    <li class="item">a</li>
-    <li class="item">a</li>
-    <li class="item">a</li>
-    <li class="item">a</li>
-    <li class="item">a</li>
-    <li class="item">a</li>
-    <li class="item">a</li>
-    <li class="item">a</li>
-    <li class="item">a</li>
-    <li class="item">a</li>
-    <li class="item">a</li>
-    <li class="item">a</li>
-    <li class="item">a</li>
-    <li class="item">a</li>
+    <li class="item" v-for="item of letters" :key="item">{{item}}</li>
   </ul>
 </template>
 
 <script>
 export default {
-  name: 'CityLetter'
+  name: 'CityLetter',
+  props: {
+    cities: Array
+  },
+  computed: {
+    letters () {
+      const letters = []
+      for (let i in this.cities) {
+        letters.push(i)
+      }
+      return letters
+    }
+  }
 }
 </script>
 
