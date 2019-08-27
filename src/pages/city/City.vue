@@ -1,9 +1,9 @@
 <template>
   <div>
     <city-header></city-header>
-    <city-search></city-search>
-    <city-list :cities="cities" :hotCities="hotCities"></city-list>
-    <city-letter :cities="cities"></city-letter>
+    <city-search :cities="cities"></city-search>
+    <city-list :cities="cities" :hotCities="hotCities" :letter="letter"></city-list>
+    <city-letter :cities="cities" @changeByletter="getletterByChange"></city-letter>
   </div>
 </template>
 
@@ -25,7 +25,8 @@ export default {
   data: function () {
     return {
       cities: {},
-      hotCities: []
+      hotCities: [],
+      letter: ''
     }
   },
   mounted () {
@@ -44,6 +45,9 @@ export default {
         this.hotCities = data.hotCities
       }
       console.log(res)
+    },
+    getletterByChange (letter) {
+      this.letter = letter
     }
   }
 }
